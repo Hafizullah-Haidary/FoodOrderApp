@@ -1,14 +1,16 @@
 header{
+  position: relative;
   background-color: white;
   border-bottom: 2px solid orange;
   padding: 0;
 }
 a{
-  color: brown;
+  color: #af1313;
 }
 a:hover{
-  background-color: blueviolet;
+  background-color: #e72929;
   color: white;
+  cursor: pointer;
 }
 .container{
   margin: 0 auto;
@@ -28,4 +30,32 @@ nav ul li a{
   padding: 1em;
   display: inline-block;
   font-weight: bold;
+}
+ul{
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+}
+a span{
+  background: #ff4d4d;
+  color: white;
+  padding: 0.1rem 0.45rem;
+  border-radius: 100rem;
+  font-size: 0.9rem;
+}
+.menu-container{
+  position: relative;
+}
+.menu{
+  position: absolute;
+  z-index: 1;
+  background: whitesmoke;
+  display: none;
+}
+.menu-container:hover .menu{
+  display: block;
+}
+.menu a{
+  width: 100;
+  min-width: 8rem;
 }

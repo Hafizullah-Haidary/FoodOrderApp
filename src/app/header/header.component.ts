@@ -1,21 +1,15 @@
-// import { Component, OnInit } from '@angular/core';
-// import { FoodService } from '../services/food/food.service';
-// import { food } from '../shared/models/food';
+import { Component, OnInit } from '@angular/core';
 
+@Component({
+  selector: 'app-header',
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css']
+})
+export class HeaderComponent implements OnInit {
 
-// @Component({
-//   selector: 'app-home',
-//   templateUrl: './home.component.html',
-//   styleUrls: ['./home.component.css']
-// })
-// export class HomeComponent implements OnInit {
-//   foods:food[]=[];
-//   currentRate:number=3;
+  constructor() { }
 
-//   constructor(private fs:FoodService) { }
+  ngOnInit(): void {
+  }
 
-//   ngOnInit(): void {
-//     this.foods=this.fs.getAll()
-//   }
-
-// }
+}
