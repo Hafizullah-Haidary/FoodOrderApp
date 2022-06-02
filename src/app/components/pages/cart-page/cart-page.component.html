@@ -1,5 +1,8 @@
 <app-title title="Cart Page" margin="1.5rem 0 0 2.5rem"></app-title>
-<div class="container">
+<app-not-found [visible]="!cart || !cart.items.length"
+notFoundMessage="Cart is Empty!"
+resetLinkText="Go To Home Page"></app-not-found>
+<div *ngIf="cart && cart.items.length"    class="container">
   <ul>
     <li *ngFor="let cartItem of cart.items">
       <div>
@@ -30,8 +33,8 @@
     </li>
   </ul>
   <div class="checkout">
-    <div class="foods-count">{{cart.totalCount}}</div>
-    <div class="foods-price">{{cart.totalPrice}}</div>
+    <div class="food-count">{{cart.totalCount}}</div>
+    <div class="food-price">{{cart.totalPrice}}</div>
     <a routerLink="/checkout">Proceed To The Checkout</a>
   </div>
 </div>
